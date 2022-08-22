@@ -1,0 +1,20 @@
+### Project Description ###
+Design a classifier that can classify whether a piece of text is encoded or not.
+
+### Method Name ###
+Word Embedding + BiLSTM
+
+### Representation of sentence ###
+The text corpus is vectorized, by turning each text into a sequence of integers (each integer being the index of a token in a dictionary).
+
+### Classifier ###
+The first layer is the Keras Embedding layer, which is followed by a BiLSTM layer with 32 units and a Global Max Pooling Layer. A dense layer with 32 units and SELU activation, a dropout layer with a rate of 0.2 and another Dense layer with 16 units and SELU activation are the next three layers. 
+
+### Training & Development ###
+Adam Optimzer with a learning rate of 0.001 is used. Binary Crossentropy Loss and Early Stopping with a patience value of 5 are also used for training purpose.
+
+### Other methods ###
+Tried FFNN and GRU models
+
+### Packages ###
+Numpy, Pandas, Keras, Tensorflow
